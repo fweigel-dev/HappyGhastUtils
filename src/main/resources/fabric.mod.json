@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "happyghastutils",
+  "version": "${version}",
+  "name": "Happy Ghast Utils",
+  "description": "Utilities for happy ghasts: sound volume control and hydration level indicator.",
+  "authors": ["fweigel-dev"],
+  "contact": {},
+  "license": "CC0-1.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.fweigel.happyghastutils.HappyGhastUtils"],
+    "client": ["dev.fweigel.happyghastutils.client.HappyGhastUtilsClient"]
+  },
+  "mixins": [
+    {
+      "config": "happyghastutils.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.2",
+    "minecraft": "~26.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fweigel-util-lib": ">=0.1.0"
+  }
+}

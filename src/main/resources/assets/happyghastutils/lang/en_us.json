@@ -1,0 +1,36 @@
+{
+  "key.happyghastutils.config": "Open Happy Ghast Utils",
+  "key.category.happyghastutils.general": "Happy Ghast Utils",
+
+  "happyghastutils.screen.title": "Happy Ghast Utils",
+  "happyghastutils.screen.section.features": "Features",
+  "happyghastutils.screen.section.sound": "Sound",
+  "happyghastutils.screen.hydration_indicator": "Hydration Indicator: %s",
+  "happyghastutils.screen.hydration_indicator.card": "Hydration: %s",
+  "happyghastutils.screen.sound_volume": "Happy Ghast Volume: %s",
+  "happyghastutils.screen.sound_volume_ghastling": "Ghastling Volume: %s",
+
+  "happyghastutils.screen.baby_timer": "Baby Timer: %s",
+  "happyghastutils.screen.baby_timer.card": "Baby Timer: %s",
+  "happyghastutils.screen.baby_timer.unavailable": "Baby Timer: Requires Server Mod",
+
+  "happyghastutils.state.on": "ON",
+  "happyghastutils.state.off": "OFF",
+
+  "happyghastutils.screen.navigation_hud": "Navigation HUD: %s",
+  "happyghastutils.screen.navigation": "Navigation...",
+  "happyghastutils.screen.navigation.tooltip": "You must be riding a Happy Ghast to use navigation",
+
+  "happyghastutils.nav.title": "Autopilot Navigation",
+  "happyghastutils.nav.button.navigate": "Navigate",
+  "happyghastutils.nav.button.cancel": "Cancel Navigation",
+  "happyghastutils.nav.button.back": "Back",
+
+  "happyghastutils.nav.hud.target": "Navigating to %s, %s, %s",
+  "happyghastutils.nav.hud.total_distance": "Total distance: %s blocks",
+  "happyghastutils.nav.hud.traveled": "Traveled: %s / %s blocks",
+  "happyghastutils.nav.hud.remaining": "Remaining: %s blocks",
+  "happyghastutils.nav.hud.eta": "ETA: %s",
+  "happyghastutils.nav.hud.cancel_hint": "Press any movement key to cancel",
+  "happyghastutils.nav.hud.arrived": "Arrived!"
+}

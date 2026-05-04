@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "dev.fweigel.happyghastutils.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "HappyGhastNavigateMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
