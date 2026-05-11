@@ -1,7 +1,6 @@
 package dev.fweigel.happyghastutils.network;
 
 import dev.fweigel.happyghastutils.HappyGhastUtils;
-import dev.fweigel.mobutils.core.network.ServerModPlayerRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -13,18 +12,12 @@ import java.util.List;
 
 public final class ServerBabyAgeHandler {
 
-    private static final ServerModPlayerRegistry modPlayers = new ServerModPlayerRegistry();
     private static int tickCounter = 0;
     private static final int SYNC_INTERVAL = 20;
     private static final double SCAN_RADIUS = 64.0;
 
     public static void register() {
-        ServerPlayNetworking.registerGlobalReceiver(HappyGhastPayloads.HelloC2S.TYPE, (payload, context) -> {
-            ServerPlayer player = context.player();
-            modPlayers.add(player);
-            ServerPlayNetworking.send(player, new HappyGhastPayloads.HelloAckS2C());
-            HappyGhastUtils.LOGGER.debug("Happy Ghast Utils handshake with {}", player.getName().getString());
-        });
+        HappyGhastPayloads.HANDSHAKE.registerServerReceiver(HappyGhastUtils.LOGGER);
     }
 
     public static void tick(MinecraftServer server) {
@@ -32,7 +25,7 @@ public final class ServerBabyAgeHandler {
         if (tickCounter < SYNC_INTERVAL) return;
         tickCounter = 0;
 
-        for (ServerPlayer player : modPlayers.getAll()) {
+        for (ServerPlayer player : HappyGhastPayloads.HANDSHAKE.getModPlayers().getAll()) {
             if (player.isRemoved()) continue;
 
             AABB area = player.getBoundingBox().inflate(SCAN_RADIUS);

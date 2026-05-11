@@ -23,6 +23,6 @@
     "minecraft": "~26.1",
     "java": ">=21",
     "fabric-api": "*",
-    "fweigel-util-lib": ">=0.1.0"
+    "fweigel-util-lib": ">=1.4.0"
   }
 }
