@@ -38,7 +38,7 @@ dependencies {
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	implementation "dev.fweigel:fweigel-util-lib:${project.util_lib_version}"
+	implementation "dev.fweigel:fweigel-util-lib:${project.fweigel_util_lib_version}"
 }
 
 processResources {

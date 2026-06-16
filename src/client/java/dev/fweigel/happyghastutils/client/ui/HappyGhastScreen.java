@@ -51,7 +51,7 @@ public class HappyGhastScreen extends ModSettingsScreen {
                 && this.minecraft.player.getVehicle() instanceof HappyGhast;
         Button navButton = Button.builder(
                 Component.translatable("happyghastutils.screen.navigation"),
-                b -> this.minecraft.setScreen(new NavigationScreen())
+                b -> this.minecraft.setScreenAndShow(new NavigationScreen())
         ).bounds(0, 0, BUTTON_WIDTH, BUTTON_HEIGHT).build();
         navButton.active = ridingGhast;
         if (!ridingGhast) {

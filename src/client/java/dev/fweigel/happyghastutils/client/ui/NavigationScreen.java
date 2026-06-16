@@ -81,7 +81,7 @@ public class NavigationScreen extends ModScreen {
 
         addRenderableWidget(Button.builder(
                 Component.translatable("happyghastutils.nav.button.back"),
-                button -> Minecraft.getInstance().setScreen(new HappyGhastScreen())
+                button -> Minecraft.getInstance().setScreenAndShow(new HappyGhastScreen())
         ).bounds(cx - BUTTON_WIDTH / 2, y, BUTTON_WIDTH, BUTTON_HEIGHT).build());
 
         updateButtonStates();

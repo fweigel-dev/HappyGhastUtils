@@ -43,7 +43,7 @@ public class HappyGhastUtilsClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (configKey.consumeClick()) {
-                client.setScreen(new HappyGhastScreen());
+                client.setScreenAndShow(new HappyGhastScreen());
             }
             GhastAutopilot.tick(client);
             if (client.level != null && client.player != null) {

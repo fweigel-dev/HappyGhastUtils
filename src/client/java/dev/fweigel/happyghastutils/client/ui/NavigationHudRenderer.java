@@ -14,7 +14,10 @@ public final class NavigationHudRenderer {
 
     public static void render(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
         Minecraft minecraft = Minecraft.getInstance();
-        if (minecraft.player == null || minecraft.options.hideGui || !HappyGhastConfig.isNavigationHudEnabled()) return;
+        // Note: in 26.2 the GUI-hidden (F1) flag is no longer publicly accessible; Fabric's
+        // HudElementRegistry elements are part of the vanilla layered HUD, which is already
+        // skipped while the GUI is hidden, so no explicit check is needed here.
+        if (minecraft.player == null || !HappyGhastConfig.isNavigationHudEnabled()) return;
 
         if (GhastAutopilot.isActive()) {
             int y = 5;
