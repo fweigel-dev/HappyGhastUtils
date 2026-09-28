@@ -16,14 +16,14 @@ import net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.animal.happyghast.HappyGhast;
-import org.lwjgl.glfw.GLFW;
+import com.mojang.blaze3d.platform.InputConstants;
 
 public class HappyGhastUtilsClient implements ClientModInitializer {
     private static KeyMapping configKey;
 
     @Override
     public void onInitializeClient() {
-        configKey = ConfigKeyHelper.register(HappyGhastUtils.MOD_ID, "key.happyghastutils.config", GLFW.GLFW_KEY_H);
+        configKey = ConfigKeyHelper.register(HappyGhastUtils.MOD_ID, "key.happyghastutils.config", InputConstants.KEY_H);
 
         SoundVolumeRegistry.register("entity.happy_ghast.", HappyGhastConfig::getGhastVolume);
         SoundVolumeRegistry.register("entity.ghastling.", HappyGhastConfig::getGhastlingVolume);
